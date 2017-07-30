@@ -47,9 +47,5 @@ class Placemark
         $obj = new self($latlng, $address);
         return $obj;
     }
-
-
-    
-    
     
 }

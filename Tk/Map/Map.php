@@ -69,9 +69,9 @@ class Map
      * @param LatLng $center
      * @return Map
      */
-    static function createMap($width = 600, $height = 400, $center = null)
+    static function create($width = 600, $height = 400, $center = null)
     {
-        return new self($width, $height, $center);
+        return new static($width, $height, $center);
     }
     
     /**

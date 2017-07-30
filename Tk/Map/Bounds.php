@@ -49,7 +49,7 @@ class Bounds
      */
     static function create(LatLng $sw, LatLng $ne)
     {
-        return new self($sw, $ne);
+        return new static($sw, $ne);
     }
     
     /**

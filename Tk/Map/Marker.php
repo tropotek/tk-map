@@ -32,7 +32,6 @@ class Marker extends Placemark
     public $iconUrl = null;
     
     
-    
     /**
      * __construct
      *
@@ -62,6 +61,5 @@ class Marker extends Placemark
         $marker = new self($latlng, $html, $iconUrl);
         return $marker;
     }
-    
     
 }
