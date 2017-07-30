@@ -4,6 +4,7 @@
     "description": "Mapping lib to handle map coordinates and display google type maps.",
     "keywords": ["tropotek", "Map"],
     "time":  "2010-12-09",
+    "version": "2.0.0",
     "license": "MIT",
     "version": "trunk",
     "authors": [
@@ -23,7 +24,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.2.x-dev"
+            "dev-master": "2.0.x-dev"
         }
     }
 

@@ -1,39 +1,35 @@
-ttek/mapping
-=========
+# Tk Map :boom: 
 
-Authors:
+__Project:__ [ttek/tk-map](http://packagist.org/packages/ttek/tk-map)  
+__Published:__ 01 Nov 2015
+__Web:__ <http://www.tropotek.com/>  
+__Authors:__ Michael Mifsud <http://www.tropotek.com/>  
+  
+Mapping lib to handle map coordinates and display google type maps.
 
-  - Michael Mifsud <http://www.tropotek.com/>
+## Contents
 
-Requirements
-------------
-
- - PHP5.3+ (GD, CURL)
- - Apache (modrewrite)
-
-
-Installation
-------------
-
-1. Clone the repository and include this project's files into your PHP
-   project/autoloader (PSR0 compatible).
-2. Add the package "ttek/{package}": "~1.0" to the composer.json file
-
-You should now be able to use the classes.
+- [Installation](#installation)
+- [Introduction](#introduction)
 
 
-Basic Usage
-------------
+## Installation
 
+Available on Packagist ([ttek/tk-map](http://packagist.org/packages/ttek/tk-map))
+and as such installable via [Composer](http://getcomposer.org/).
 
+```bash
+composer require ttek/tk-map
+```
 
-  <?php
+Or add the following to your composer.json file:
 
-  // TODO: Example of using the code
+```json
+"ttek/tk-map": "~2.0"
+```
 
+If you do not use Composer, you can grab the code from GitHub, and use any
+PSR-0 compatible autoloader (e.g. the [PHP DomTemplate](https://github.com/tropotek/tk-map))
+to load the classes.
 
-  ?>
-
-
-
-
+## Introduction
