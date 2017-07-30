@@ -1,16 +1,13 @@
 <?php
-/*
- * @author Michael Mifsud <info@tropotek.com>
- * @link http://www.tropotek.com/
- * @license Copyright 2005 Michael Mifsud
- */
 namespace Map;
 
 /**
  * A map marker object
  *
  *
- * @package Map
+ * @author Michael Mifsud <info@tropotek.com>
+ * @link http://www.tropotek.com/
+ * @license Copyright 2005 Michael Mifsud
  */
 class Marker extends Placemark
 {
