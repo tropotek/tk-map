@@ -10,19 +10,16 @@ namespace Tk\Map\Google;
  * @link http://www.tropotek.com/
  * @license Copyright 2005 Michael Mifsud
  */
-class View extends \Mod\Renderer
+class View extends \Dom\Renderer\Renderer
 {
-
-
     // ROADMAP, SATELLITE, TERRAIN, HYBRID
     const TYPE_ROADMAP = 'ROADMAP';
     const TYPE_SATELLITE = 'SATELLITE';
     const TYPE_TERRAIN = 'TERRAIN';
     const TYPE_HYBRID = 'HYBRID';
-
     
     /**
-     * @var null|string
+     * @var null|\Tk\Uri
      */
     private $url = 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,geometry';
     
@@ -54,14 +51,15 @@ class View extends \Mod\Renderer
      * @param \Tk\Map\Map $map
      * @param bool $hidden
      * @param string $key
+     * @param null|string|\Tk\Uri $url
      */
-    function __construct(\Map\Map $map, $hidden = false, $key = '', $url = null)
+    function __construct(\Tk\Map\Map $map, $hidden = false, $key = '', $url = null)
     {
         $this->map = $map;
         $this->hidden = $hidden;
         $this->key = $key;
         if ($url)
-            $this->url = $url;
+            $this->url = \Tk\Uri::create($url);
     }
 
 
@@ -71,9 +69,10 @@ class View extends \Mod\Renderer
      * @param \Tk\Map\Map $map
      * @param bool $hidden
      * @param string $key
+     * @param null|string|\Tk\Uri $url
      * @return View
      */
-    static function createView(\Map\Map $map, $hidden = false, $key = '', $url = null)
+    static function createView(\Tk\Map\Map $map, $hidden = false, $key = '', $url = null)
     {
         return new self($map, $hidden, $key, $url);
     }
@@ -117,6 +116,11 @@ class View extends \Mod\Renderer
     {
         return md5(serialize($this->map)) . '_' . $this->map->getMapId();
     }
+    
+    function getMapElementId()
+    {
+        return 'GMapCanvas_' . $this->getMapId();
+    }
 
     /**
      * setPostInit
@@ -146,7 +150,7 @@ class View extends \Mod\Renderer
 
         $markers = 'var markers = [];';
         if (count($this->map->getMarkerList())) {
-            /* @var $m \Map\Marker */
+            /* @var $m \Tk\Map\Marker */
             foreach ($this->map->getMarkerList() as $i => $m) {
                 $url = '';
                 if ($m->iconUrl) {
@@ -164,11 +168,10 @@ class View extends \Mod\Renderer
         $template->setAttr('canvas', 'style', 'width:' . $this->map->width . 'px; height:' . $this->map->height . 'px;');
 
         // Google Maps Start
-        $apiUrl = \Tk\Url::create($this->url);
         if ($this->key) {
-            $apiUrl->set('key', $this->key);
+            $this->url->set('key', $this->key);
         }
-        $template->appendJsUrl($apiUrl);
+        $template->appendJsUrl($this->url);
 
 
         $js = <<<JS
