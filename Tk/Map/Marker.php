@@ -27,7 +27,7 @@ class Marker extends Placemark
     public $html = '';
     
     /**
-     * @var \Tk\Url
+     * @var \Tk\Uri
      */
     public $iconUrl = null;
     
@@ -37,12 +37,12 @@ class Marker extends Placemark
      *
      * @param LatLng $latlng
      * @param string $html
-     * @param \Tk\Url|string $iconUrl
+     * @param \Tk\Uri|string $iconUrl
      */
     function __construct(LatLng $latlng, $html = '', $iconUrl = null)
     {
         parent::__construct($latlng);
-        $this->html = str_replace("\n", '\n', $html);
+        $this->html = $html;
         if ($iconUrl) {
             $this->icon = $iconUrl;
         }
@@ -53,12 +53,12 @@ class Marker extends Placemark
      *
      * @param LatLng $latlng
      * @param string $html
-     * @param \Tk\Url|string $iconUrl
+     * @param \Tk\Uri|string $iconUrl
      * @return Marker
      */
     static function createMarker(LatLng $latlng, $html = '', $iconUrl = null)
     {
-        $marker = new self($latlng, $html, $iconUrl);
+        $marker = new static($latlng, $html, $iconUrl);
         return $marker;
     }
     

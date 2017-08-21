@@ -187,7 +187,7 @@ jQuery(function($) {
           zoom: zoom,
           center: center,
           mapTypeId: google.maps.MapTypeId.{$this->type}  // ROADMAP, SATELLITE, TERRAIN, HYBRID
-        }
+        };
       var map = new google.maps.Map(mapEl, myOptions);
       mapEl.map = map;
       mapEl.markers = markers;
