@@ -159,8 +159,9 @@ class View extends \Dom\Renderer\Renderer
                 $markers .= sprintf("\n    markers[$i] = { latlng: new google.maps.LatLng(%s, %s), title: '%s', html: '%s' }",
                     $m->latlng->lat,
                     $m->latlng->lng,
-                    addslashes(htmlentities($m->title)),
-                    addslashes($m->html));
+                    str_replace(array("\r","\n"), ' ', addslashes(htmlentities($m->title))),
+                    str_replace(array("\r","\n"), ' ', addslashes($m->html))
+                );
             }
         }
 
