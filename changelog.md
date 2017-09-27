@@ -1,5 +1,11 @@
 #CHANGELOG#
 
+Ver 2.0.0 [2017-09-27]:
+-------------------------------
+ - Minor Code Updates
+ - Php7 ready
+
+
 Ver 1.2.0 [2014-11-17]:
 ----------------
  - Finished updates
