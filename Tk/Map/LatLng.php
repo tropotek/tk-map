@@ -101,7 +101,7 @@ class LatLng
      */
     public function equals(LatLng $latlng)
     {
-        // TODO:
+        return ($this->lat == $latlng->lat && $this->lng == $latlng->lng);
     }
 
     /**

@@ -29,7 +29,7 @@ class Marker extends Placemark
     /**
      * @var \Tk\Uri
      */
-    public $iconUrl = null;
+    public $icon = null;
     
     
     /**
@@ -37,14 +37,15 @@ class Marker extends Placemark
      *
      * @param LatLng $latlng
      * @param string $html
-     * @param \Tk\Uri|string $iconUrl
+     * @param \Tk\Uri|string $icon
      */
-    function __construct(LatLng $latlng, $html = '', $iconUrl = null)
+    function __construct(LatLng $latlng, $html = '', $icon = null)
     {
         parent::__construct($latlng);
+        $this->icon = \Tk\Uri::create('/vendor/ttek/tk-map/js/icons/mm_20_yellow.png');
         $this->html = $html;
-        if ($iconUrl) {
-            $this->icon = $iconUrl;
+        if ($icon) {
+            $this->icon = $icon;
         }
     }
     
@@ -53,12 +54,12 @@ class Marker extends Placemark
      *
      * @param LatLng $latlng
      * @param string $html
-     * @param \Tk\Uri|string $iconUrl
+     * @param \Tk\Uri|string $icon
      * @return Marker
      */
-    static function createMarker(LatLng $latlng, $html = '', $iconUrl = null)
+    static function createMarker(LatLng $latlng, $html = '', $icon = null)
     {
-        $marker = new static($latlng, $html, $iconUrl);
+        $marker = new static($latlng, $html, $icon);
         return $marker;
     }
     

@@ -153,8 +153,8 @@ class View extends \Dom\Renderer\Renderer
             /* @var $m \Tk\Map\Marker */
             foreach ($this->map->getMarkerList() as $i => $m) {
                 $url = '';
-                if ($m->iconUrl) {
-                    $url = $m->iconUrl->toString();
+                if ($m->icon) {
+                    $url = $m->icon->toString();
                 }
                 $markers .= sprintf("\n    markers[$i] = { latlng: new google.maps.LatLng(%s, %s), title: '%s', html: '%s' }",
                     $m->latlng->lat,
