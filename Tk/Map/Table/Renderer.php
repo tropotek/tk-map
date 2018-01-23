@@ -82,7 +82,7 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
                 $htmlRow .= sprintf('<div class="%s">%s</div>', $cell->getCssString(), $html);
             }
         }
-        
+
         return '<div class="row-group">' . $htmlRow . '</div>';
     }
 
