@@ -83,9 +83,9 @@
             addMarker(this);
             autoCenter();
           });
-
-
-        }, 'json');
+        }, 'json').fail(function (obj, type, message) {
+          console.error('AJAX Error: ' + message);
+        });
       }
 
     };  // END init()
@@ -122,13 +122,14 @@
       }
       var icon = { url: url, size: size };
 
-      var mk = new google.maps.Marker({
+      var mkOptions = {
         map: map,
         position: new google.maps.LatLng(location.latlng.lat, location.latlng.lng),
         title: location.title,
         icon: icon,
         object: location
-      });
+      };
+      var mk = new google.maps.Marker(mkOptions);
 
       google.maps.event.addListener(mk, 'click', function() {
         infoWindow.setContent(this.object.html);

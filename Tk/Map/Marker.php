@@ -25,11 +25,12 @@ class Marker extends Placemark
      * @var string
      */
     public $html = '';
-    
+
     /**
      * @var \Tk\Uri
      */
     public $icon = null;
+
     
     
     /**
