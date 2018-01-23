@@ -115,7 +115,7 @@
 
       var url = 'http://labs.google.com/ridefinder/images/mm_20_yellow.png';
       var size = new google.maps.Size(12, 20);
-        console.log(location);
+
       if (location.icon) {
         url = location.icon;
         // TODO: size ????

@@ -114,7 +114,6 @@ jQuery(function($) {
   $('.tk-table .table').each(function (i) {
     if (!$.fn.tkMap) return;
     $(this).tkMap({});
-    
   });
   
 });
