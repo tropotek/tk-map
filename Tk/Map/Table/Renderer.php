@@ -51,7 +51,6 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
                 //vd(json_encode($m, \JSON_PRETTY_PRINT));
                 $data['markerList'][] = $m;
             }
-
             \Tk\ResponseJson::createJson($data)->send();
         } catch (Exception $e) {
             \Tk\ResponseJson::createJson(array('error' => $e->getMessage()), \Tk\ResponseJson::HTTP_INTERNAL_SERVER_ERROR)->send();
@@ -59,10 +58,13 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
         exit();
     }
 
+    /**
+     * @param $obj
+     * @return string
+     */
     public function getObjectHtml($obj)
     {
         $htmlRow = '';
-
 
         /* @var \Tk\Table\Cell\Iface $cell */
         foreach($this->getTable()->getCellList() as $k => $cell) {
@@ -80,8 +82,7 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
                 $htmlRow .= sprintf('<div class="%s">%s</div>', $cell->getCssString(), $html);
             }
         }
-
-
+        
         return '<div class="row-group">' . $htmlRow . '</div>';
     }
 
