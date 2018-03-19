@@ -226,6 +226,7 @@ JS;
      * makeTemplate
      *
      * @return \Dom\Template
+     * @throws \Dom\Exception
      */
     public function __makeTemplate()
     {

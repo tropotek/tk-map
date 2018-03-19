@@ -51,12 +51,13 @@ class Bounds
     {
         return new static($sw, $ne);
     }
-    
+
     /**
      * Create a map point object
      *
      * @param String $str
      * @return Bounds
+     * @throws \Tk\Exception
      */
     static function createFromString($str)
     {
@@ -91,7 +92,7 @@ class Bounds
      * Returns true if the given lat/lng is in this bounds.
      *
      * @param LatLng $latlng
-     * @return bool
+     * @return void
      */
     public function contains(LatLng $latlng)
     {
@@ -102,7 +103,7 @@ class Bounds
      * Returns true if this bounds approximately equals the given bounds.
      *
      * @param Bounds $bounds
-     * @return bool
+     * @return void
      */
     public function equals(Bounds $bounds)
     {
@@ -113,7 +114,7 @@ class Bounds
      * Returns true if this bounds shares any points with this bounds.
      *
      * @param Bounds $bounds
-     * @return bool
+     * @return void
      */
     public function intersects(Bounds $bounds)
     {
@@ -124,7 +125,7 @@ class Bounds
      * Extends this bounds to contain the union of this and the given bounds.
      *
      * @param Bounds $bounds
-     * @return Bounds
+     * @return void
      */
     public function union(Bounds $bounds)
     {
@@ -135,7 +136,7 @@ class Bounds
      * Extends this bounds to contain the given point.
      *
      * @param LatLng $latlng
-     * @return Bounds
+     * @return void
      */
     public function extend(LatLng $latlng)
     {

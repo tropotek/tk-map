@@ -38,13 +38,10 @@ class Renderer extends \Mod\Module
 //    protected $queryCallback = null;
 
 
-
-
     /**
      * Create the object instance
      *
      * @param Table $table
-     * @param array $callback
      */
     public function __construct(Table $table)
     {
@@ -62,7 +59,6 @@ class Renderer extends \Mod\Module
      * Create a new form with a new form renderer
      *
      * @param Table $table
-     * @param array $callback
      * @return Renderer
      */
     static function create($table)
@@ -103,7 +99,7 @@ class Renderer extends \Mod\Module
      *
      * @param \Tk\Object $obj
      * @param stdClass $jObj
-     * @return array
+     * @return void
      */
     protected function insertRow2($obj, $jObj)
     {
@@ -505,6 +501,7 @@ XML;
      * Render the table data rows
      *
      * @param array $list
+     * @throws \Dom\Exception
      */
     public function showTd($list)
     {
@@ -532,6 +529,7 @@ XML;
      * @param \Tk\Object $obj
      * @param \Dom\Template $template The row repeat template
      * @return array
+     * @throws \Dom\Exception
      */
     protected function insertRow($obj, $template)
     {

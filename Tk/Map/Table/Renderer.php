@@ -87,13 +87,14 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
     }
 
 
-
     /**
      * Execute the renderer.
      * The returned object can be anything that you need to render
      * the output.
      *
      * @return mixed
+     * @throws \Dom\Exception
+     * @throws \Tk\Db\Exception
      */
     public function show()
     {

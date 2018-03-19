@@ -26,6 +26,7 @@ class Geocode
      * Create
      *
      * @param string $key
+     * @param null $url
      */
     public function __construct($key = '', $url = null)
     {
@@ -36,10 +37,11 @@ class Geocode
 
 
     /**
-     * Create 
+     * Create
      *
      * @param string $gKey
-     * @return \Map\Google\Geocode
+     * @param null $url
+     * @return Geocode
      */
     static function create($gKey = '', $url = null)
     {
