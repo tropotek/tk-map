@@ -7,7 +7,7 @@ namespace Tk\Map\Google;
  * @not: Consider adding the map to an Iframe to avoid page stalling when map server down.
  *
  * @author Michael Mifsud <info@tropotek.com>
- * @link http://www.tropotek.com/
+ * @see http://www.tropotek.com/
  * @license Copyright 2005 Michael Mifsud
  */
 class View extends \Dom\Renderer\Renderer

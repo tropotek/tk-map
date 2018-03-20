@@ -5,7 +5,7 @@ use Tk\Exception;
 
 /**
  * @author Michael Mifsud <info@tropotek.com>
- * @link http://www.tropotek.com/
+ * @see http://www.tropotek.com/
  * @license Copyright 2007 Michael Mifsud
  */
 class Renderer extends \Tk\Table\Renderer\Dom\Table

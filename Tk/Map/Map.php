@@ -5,7 +5,7 @@ namespace Tk\Map;
  * A map object. This should contain all the information needed to display a map
  *
  * @author Michael Mifsud <info@tropotek.com>
- * @link http://www.tropotek.com/
+ * @see http://www.tropotek.com/
  * @license Copyright 2005 Michael Mifsud
  */
 class Map

@@ -10,7 +10,7 @@ namespace Tk\Map;
  * {SW} *------
  *
  * @author Michael Mifsud <info@tropotek.com>
- * @link http://www.tropotek.com/
+ * @see http://www.tropotek.com/
  * @license Copyright 2005 Michael Mifsud
  */
 class Bounds
