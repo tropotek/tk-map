@@ -19,6 +19,7 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
     static function create($table = null)
     {
         $obj = new static($table);
+        $table->setAttr('style', 'visibility: hidden;');
         return $obj;
     }
 
@@ -113,7 +114,7 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
         $js = <<<JS
 jQuery(function($) {
   
-  $('.tk-table .table').each(function (i) {
+  $('.tk-table .map-table').each(function (i) {
     if (!$.fn.tkMap) return;
     $(this).tkMap({});
   });
