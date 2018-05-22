@@ -12,7 +12,7 @@ use Tk\Exception;
 class Renderer extends \Tk\Table\Renderer\Dom\Table
 {
 
-    
+
     /**
      * @param \Tk\Table $table
      * @return static
