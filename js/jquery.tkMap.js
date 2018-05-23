@@ -33,7 +33,7 @@
     // plugin vars
     var defaults = {
       ajaxUrl: '',
-      canvasTpl: '<div class="tk-table-map` map"></div>',
+      canvasTpl: '<div class="tk-table-map map"></div>',
       mapOptions: {
         zoom: 1,
         maxZoom: 16,
@@ -93,23 +93,23 @@
 
 
 
-      /**
-       *
-       *  Location Json Object: {
-       *    "visible": true,
-       *    "title": "Agnes Banks Equine Clinic",
-       *    "html": "<h5>Agnes Banks Equine Clinic<\/h5>\n<p><p class=\"impSpecEqu\"><strong>Specialist Equipment:<\/strong> Endoscope<\/p><\/p>",
-       *    "iconUrl": null,
-       *    "latlng": {
-       *        "lat": -33.61056137,
-       *        "lng": 150.71524048
-       *    },
-       *    "address": "",
-       *    "icon": "/~mifsudm/Unimelb/ems/vendor/ttek/tk-map/js/icons/mm_20_yellow.png"
-       *  }
-       *
-       *
-       */
+    /**
+     *
+     *  Location Json Object: {
+     *    "visible": true,
+     *    "title": "Agnes Banks Equine Clinic",
+     *    "html": "<h5>Agnes Banks Equine Clinic<\/h5>\n<p><p class=\"impSpecEqu\"><strong>Specialist Equipment:<\/strong> Endoscope<\/p><\/p>",
+     *    "iconUrl": null,
+     *    "latlng": {
+     *        "lat": -33.61056137,
+     *        "lng": 150.71524048
+     *    },
+     *    "address": "",
+     *    "icon": "/~mifsudm/Unimelb/ems/vendor/ttek/tk-map/js/icons/mm_20_yellow.png"
+     *  }
+     *
+     *
+     */
     function addMarker(location) {
       if (!location) return;
 
@@ -118,7 +118,6 @@
 
       if (location.icon) {
         url = location.icon;
-        // TODO: size ????
       }
       var icon = { url: url, size: size };
 
