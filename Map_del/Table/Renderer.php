@@ -97,7 +97,7 @@ class Renderer extends \Mod\Module
     /**
      * Insert an object's cells into a row
      *
-     * @param \Tk\Object $obj
+     * @param \Tk\ObjectUtil $obj
      * @param stdClass $jObj
      * @return void
      */
@@ -507,7 +507,7 @@ XML;
     {
         $template = $this->getTemplate();
         $idx = 0;
-        /* @var $obj \Tk\Object */
+        /* @var $obj \Tk\ObjectUtil */
         foreach ($list as $obj) {
             $repeatRow = $template->getRepeat('tr');
             $rowClassArr = $this->insertRow($obj, $repeatRow);
@@ -526,7 +526,7 @@ XML;
     /**
      * Insert an object's cells into a row
      *
-     * @param \Tk\Object $obj
+     * @param \Tk\ObjectUtil $obj
      * @param \Dom\Template $template The row repeat template
      * @return array
      * @throws \Dom\Exception
