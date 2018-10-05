@@ -21,7 +21,7 @@ class View extends \Dom\Renderer\Renderer
     /**
      * @var null|\Tk\Uri
      */
-    private $url = 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,geometry';
+    //private $url = 'https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places,geometry';
     
     /**
      * The google map key
@@ -50,16 +50,14 @@ class View extends \Dom\Renderer\Renderer
      *
      * @param \Tk\Map\Map $map
      * @param bool $hidden
-     * @param string $key
-     * @param null|string|\Tk\Uri $url
      */
     function __construct(\Tk\Map\Map $map, $hidden = false, $key = '', $url = null)
     {
         $this->map = $map;
         $this->hidden = $hidden;
-        $this->key = $key;
-        if ($url)
-            $this->url = \Tk\Uri::create($url);
+        //$this->key = $key;
+//        if ($url)
+//            $this->url = \Tk\Uri::create($url);
     }
 
 
@@ -169,10 +167,11 @@ class View extends \Dom\Renderer\Renderer
         $template->setAttr('canvas', 'style', 'width:' . $this->map->width . 'px; height:' . $this->map->height . 'px;');
 
         // Google Maps Start
-        if ($this->key) {
-            $this->url->set('key', $this->key);
-        }
-        $template->appendJsUrl($this->url);
+//        if ($this->key) {
+//            $this->url->set('key', $this->key);
+//        }
+//        $template->appendJsUrl($this->url);
+        \App\Ui\Js::includeGoogleMaps($template, array('libraries' => 'places,geometry'));
 
 
         $js = <<<JS

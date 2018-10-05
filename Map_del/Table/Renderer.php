@@ -208,7 +208,8 @@ CSS;
         $template->appendCss($css);
 
 
-        $template->appendJsUrl(\Tk\Url::create('http://maps.googleapis.com/maps/api/js?sensor=false'));
+        //$template->appendJsUrl(\Tk\Url::create('http://maps.googleapis.com/maps/api/js?sensor=false'));
+        \App\Ui\Js::includeGoogleMaps($template);
         /* TODO: move to assets public folder or find another solution */
         $template->appendJsUrl(\Tk\Url::createLibUrl('/Map/Google/js/markerclusterer/src/markerclusterer.js'));
 
