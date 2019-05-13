@@ -7,7 +7,7 @@
         "Map"
     ],
     "time": "2017-09-27",
-    "version": "2.0.2",
+    "version": "master",
     "license": "MIT",
     "authors":  [
          {
@@ -22,11 +22,10 @@
         }
     },
     "require":  {
-        "ttek/tk-framework": "~2.0"
     },
     "extra":  {
         "branch-alias":  {
-            "dev-master": "2.0.x-dev"
+            "dev-master": "3.0.x-dev"
         }
     }
 }
