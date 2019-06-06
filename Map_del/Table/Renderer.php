@@ -138,7 +138,7 @@ class Renderer extends \Mod\Module
 
         // Table Events
         if (count($this->table->getActionList()) > 0 || count($this->table->getFilterList()) > 0) {
-            $template->setChoice('TableEvents');
+            $template->setVisible('TableEvents');
         }
         //$this->showActions($this->table->getActionList());
         $this->showFilters($this->table->getFilterList());
@@ -436,7 +436,7 @@ XML;
         $template = $this->getTemplate();
         $this->formRenderer->showEvents($template);
         $this->formRenderer->showFields($template);
-        $template->setChoice('filters');
+        $template->setVisible('filters');
     }
 
     /**
@@ -450,7 +450,7 @@ XML;
             return;
         }
         $template = $this->getTemplate();
-        $template->setChoice('actions');
+        $template->setVisible('actions');
         /* @var $action \Table\Action\Iface */
         foreach ($actionList as $action) {
             $data = $action->getHtml($this->table->getList());
