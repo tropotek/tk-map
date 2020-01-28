@@ -73,12 +73,12 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
             if (!$cell->isVisible()) continue;
 
             $html = $cell->getCellHtml($obj, $this->rowId);
-            if (is_callable($cell->getOnCellHtml())) {
-                $h = call_user_func_array($cell->getOnCellHtml(), array($cell, $obj, $html));
-                if ($h !== null) $html = $h;
-            }
+            //if (is_callable($cell->getOnCellHtml())) {
+                //$r = call_user_func_array($cell->getOnCellHtml(), array($cell, $obj, $html));
+                $r = $cell->getOnCellHtml()->execute($cell, $obj, $html);
+                if ($r !== null) $html = $r;
+            //}
             if ($html) {
-
                 $cell->addCss('td');
                 $cell->addCss('m' . ucfirst($cell->getProperty()));
                 $htmlRow .= sprintf('<div class="%s">%s</div>', $cell->getCssString(), $html);
@@ -95,8 +95,7 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
      * the output.
      *
      * @return mixed
-     * @throws \Dom\Exception
-     * @throws \Tk\Db\Exception
+     * @throws \Exception
      */
     public function show()
     {
