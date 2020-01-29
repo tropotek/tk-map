@@ -6,7 +6,7 @@
         "tropotek",
         "Map"
     ],
-    "time": "2020-01-29",
+    "time": "2017-09-27",
     "license": "MIT",
     "authors":  [
          {
@@ -26,6 +26,5 @@
         "branch-alias":  {
             "dev-master": "3.0.x-dev"
         }
-    },
-    "version": "3.0.6"
+    }
 }
