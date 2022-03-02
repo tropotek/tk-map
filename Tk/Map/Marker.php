@@ -43,7 +43,7 @@ class Marker extends Placemark
     function __construct(LatLng $latlng, $html = '', $icon = null)
     {
         parent::__construct($latlng);
-        $this->icon = \Tk\Uri::create('/vendor/ttek/tk-map/js/icons/mm_20_yellow.png');
+        $this->icon = \Tk\Uri::create('/vendor/uom/tk-map/js/icons/mm_20_yellow.png');
         $this->html = $html;
         if ($icon) {
             $this->icon = $icon;
