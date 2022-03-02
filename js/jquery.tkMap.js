@@ -105,7 +105,7 @@
      *        "lng": 150.71524048
      *    },
      *    "address": "",
-     *    "icon": "/~mifsudm/Unimelb/ems/vendor/ttek/tk-map/js/icons/mm_20_yellow.png"
+     *    "icon": "/~mifsudm/Unimelb/ems/vendor/uom/tk-map/js/icons/mm_20_yellow.png"
      *  }
      *
      *
