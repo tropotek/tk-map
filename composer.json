@@ -1,5 +1,5 @@
 {
-    "name": "ttek/tk-map",
+    "name": "uom/tk-map",
     "type": "library",
     "description": "Mapping lib to handle map coordinates and display google type maps.",
     "keywords":  [
@@ -11,14 +11,7 @@
     "authors":  [
          {
             "name": "Michael Mifsud",
-            "email": "info@tropotek.com.au",
             "homepage": "http://www.tropotek.com/"
-        }
-    ],
-    "funding": [
-        {
-            "type": "Paypal",
-            "url": "https://www.paypal.me/tropotek"
         }
     ],
     "autoload":  {
