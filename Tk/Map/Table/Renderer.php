@@ -50,7 +50,6 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
                 if ($m->icon instanceof \Tk\Uri)
                     $m->icon = $m->icon->__toString();
                 $m->html = $this->getObjectHtml($obj);
-                //vd(json_encode($m, \JSON_PRETTY_PRINT));
                 $data['markerList'][] = $m;
             }
             \Tk\ResponseJson::createJson($data)->send();
