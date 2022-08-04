@@ -1,6 +1,8 @@
 <?php
 namespace Tk\Map;
 
+use Tk\ConfigTrait;
+
 /**
  *
  *
@@ -10,6 +12,7 @@ namespace Tk\Map;
  */
 class Placemark
 {
+    use ConfigTrait;
     
     /**
      * @var LatLng
