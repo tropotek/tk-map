@@ -106,7 +106,7 @@ class Renderer extends \Tk\Table\Renderer\Dom\Table
         $template = parent::show();
 
         \App\Ui\Js::includeGoogleMaps($template);
-        $template->appendJsUrl(\Tk\Uri::create('/vendor/uom/tk-map/js/jquery.tkMap.js'));
+        $template->appendJsUrl(\Tk\Uri::create($this->getConfig()->getOrgVendor() . '/tk-map/js/jquery.tkMap.js'));
 
         $template->setAttr('table', 'data-ajax-url', \Tk\Uri::create()->set('list'));
 
