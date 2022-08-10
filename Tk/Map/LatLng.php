@@ -11,7 +11,7 @@ namespace Tk\Map;
  * Notice that you cannot modify the coordinates of a LatLng. If you want to compute another point, you have to create a new one.
  *
  *
- * @author Michael Mifsud <info@tropotek.com>
+ * @author Michael Mifsud <http://www.tropotek.com/>
  * @see http://www.tropotek.com/
  * @license Copyright 2005 Michael Mifsud
  */

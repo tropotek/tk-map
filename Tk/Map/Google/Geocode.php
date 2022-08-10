@@ -4,7 +4,7 @@ namespace Tk\Map\Google;
 /**
  *
  *
- * @author Michael Mifsud <info@tropotek.com>
+ * @author Michael Mifsud <http://www.tropotek.com/>
  * @see http://www.tropotek.com/
  * @license Copyright 2005 Michael Mifsud
  */
